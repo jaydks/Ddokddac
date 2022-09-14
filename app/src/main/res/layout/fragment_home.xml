@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topbackground"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_250"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/background_home_top"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/search"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_60"
+            app:cardCornerRadius="@dimen/margin_10"
+            app:cardElevation="@dimen/margin_10"
+            android:backgroundTint="@color/white"
+            android:layout_marginHorizontal="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_35"
+            >
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/margin_25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/divider"
+                android:text="질병, 진료과, 병원을 검색해보세요."
+                />
+
+            <ImageView
+                android:layout_width="@dimen/margin_30"
+                android:layout_height="@dimen/margin_30"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:layout_gravity="end|center_vertical"
+                android:src="@drawable/ic_baseline_search_24"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="사용자님,\n건강한 하루 보내세요!"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            app:layout_constraintTop_toBottomOf="@id/search"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_30"
+            />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="@dimen/margin_15"
+        android:backgroundTint="@color/black"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/topbackground"
+        android:layout_marginTop="@dimen/margin_35"
+        android:layout_marginHorizontal="@dimen/margin_20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <com.asksira.loopingviewpager.LoopingViewPager
+            android:id="@+id/viewpager1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_100"
+            app:layout_constraintTop_toBottomOf="@id/topbackground"
+            app:isInfinite="true"
+            app:autoScroll="false"
+            app:scrollInterval="5000"
+            />
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

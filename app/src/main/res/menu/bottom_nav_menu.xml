@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/homeFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="홈"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/navigation_category_history"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_featured_play_list_24"
+        android:title="진료내역"
+        app:showAsAction="always" />
+
+    <item
+
+        android:id="@+id/navigation_category_mypage"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_person_outline_24"
+        android:title="마이페이지"
+        app:showAsAction="always" />
+
+
+</menu>
